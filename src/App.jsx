@@ -6,6 +6,8 @@ import ComParametro from './components/basicos/ComParametro'
 import Fragmento from './components/basicos/Fragmento'
 import Aleatorio from './components/basicos/Aleatorio'
 import Card from './components/basicos/layout/Card'
+import Familia from './components/basicos/Familia';
+import FamiliaMembro from './components/basicos/FamiliaMembro';
 
 function App(props){
   return(
@@ -13,6 +15,14 @@ function App(props){
       <h1>Fundamentos React</h1>
 
       <div className="Cards">
+        <Card titulo="Componente com filhos" color="#00FF7F">
+          <Familia sobrenome="Ferreira">
+            <FamiliaMembro nome="Pedro" />
+            <FamiliaMembro nome="Ana" />
+            <FamiliaMembro nome="Gustavo" />
+          </Familia>
+        </Card>
+
         <Card titulo="Desafio Aleatorio" color="#FA6900">
           <Aleatorio min={1} max={60} />
         </Card>
